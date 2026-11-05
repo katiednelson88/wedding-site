@@ -47,7 +47,7 @@ RAIN = '''<div class="rain">
         <span style="font-size:15px">Cold outside, warm once everyone's dancing. More weather intel closer to the date.</span>
       </div>'''
 
-FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap">\n<link rel="stylesheet" href="styles.css">'
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap">\n<link rel="stylesheet" href="styles.css?v=2">'
 
 
 def nav(current):
@@ -89,7 +89,7 @@ def page(fname, title, body):
     <span class="mono">Questions? Text Katie or Matt.</span>
   </div>
 </footer>
-<script src="site.js"></script>
+<script src="site.js?v=2"></script>
 </body>
 </html>
 '''
