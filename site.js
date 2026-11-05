@@ -1,7 +1,7 @@
 // Rizz Airways site script
 // After the Google Sheet script is deployed, paste its web app URL here.
 var SITE_CONFIG = {
-  endpoint: ""
+  endpoint: "https://script.google.com/macros/s/AKfycbyJDwtCjE74e8b39ti5a_V_Fvn1iiu9wh2mHhBMJkP1eY_5ZBHEma8mIJMtvxuLbB_Gxg/exec"
 };
 
 (function () {
