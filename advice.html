@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Unsolicited Advice · Ktizzle and Mattyrizz</title>
+<meta name="description" content="Ktizzle and Mattyrizz are getting married at Blairmore Millhouse, Inverness, 26 to 28 May 2028.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Space+Mono:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="./"><span>KT&nbsp;+&nbsp;MR</span> Rizz Airways</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="./">The Lore</a></li>
+        <li><a href="plan.html">The Plan</a></li>
+        <li><a href="guide.html">Survival Guide</a></li>
+        <li><a href="advice.html" aria-current="page">Unsolicited Advice</a></li>
+        <li><a class="btn" href="rsvp.html">RSVP</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="pagehead">
+    <div class="wrap">
+      <svg class="thistle" viewBox="0 0 120 200" aria-hidden="true">
+        <path d="M60 196 C58 160 60 120 60 92" stroke="#6E6A16" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M60 150 C40 140 26 146 14 134 C26 132 22 122 32 120 C34 128 46 128 48 138 C52 132 56 140 60 144 Z" fill="#BBB256" stroke="#2B0F33" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M60 128 C80 118 94 124 106 112 C94 110 98 100 88 98 C86 106 74 106 72 116 C68 110 64 118 60 122 Z" fill="#BBB256" stroke="#2B0F33" stroke-width="2.5" stroke-linejoin="round"/>
+        <path d="M36 92 C36 72 84 72 84 92 C84 110 70 118 60 118 C50 118 36 110 36 92 Z" fill="#BBB256" stroke="#2B0F33" stroke-width="3"/>
+        <path d="M42 86 L50 96 M54 84 L60 98 M66 84 L60 98 M78 86 L70 96 M46 100 L56 110 M74 100 L64 110" stroke="#2B0F33" stroke-width="2" stroke-linecap="round"/>
+        <path d="M40 78 C34 54 30 36 34 18 M48 76 C46 50 44 30 48 10 M60 74 C60 48 60 26 60 6 M72 76 C74 50 76 30 72 10 M80 78 C86 54 90 36 86 18" stroke="#68367F" stroke-width="7" fill="none" stroke-linecap="round"/>
+        <path d="M44 78 C40 58 38 42 42 26 M54 76 C54 52 52 34 54 16 M66 76 C66 52 68 34 66 16 M76 78 C80 58 82 42 78 26" stroke="#C4155F" stroke-width="4" fill="none" stroke-linecap="round"/>
+        <path d="M36 80 C50 70 70 70 84 80" stroke="#2B0F33" stroke-width="3" fill="none" stroke-linecap="round"/>
+      </svg>
+      <p class="eyebrow">Unsolicited Advice</p>
+      <h1>Tell us what you know</h1>
+      <p class="lede">Planning tips, day-of wisdom, marriage advice, wildcard opinions. Everything goes on the wall below so it can spark ideas for everyone else.</p>
+    </div>
+  </div>
+
+  <section class="tight">
+    <div class="wrap">
+      <form class="form" id="advice-form" novalidate>
+        <div class="field">
+          <label for="category">What kind of advice?</label>
+          <select id="category" name="category">
+            <option>Planning</option>
+            <option>Day-of</option>
+            <option>Marriage</option>
+            <option>Wildcard</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="advice">Your wisdom</label>
+          <textarea id="advice" name="advice" placeholder="Pack a spare pair of socks. Scotland." maxlength="600"></textarea>
+          <p class="err" id="err-advice" hidden>Write a little something first.</p>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="aname">Your name (optional)</label>
+            <input type="text" id="aname" name="name" autocomplete="name" placeholder="Auntie Mo">
+          </div>
+          <div class="field" style="align-content:end">
+            <label class="opt" style="justify-self:start"><input type="checkbox" id="showName" name="showName" checked><span>Show my name on the wall</span></label>
+          </div>
+        </div>
+        <div><button type="submit" class="btn">Post to the wall</button></div>
+        <div id="advice-status" tabindex="-1" role="status" hidden></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <p class="eyebrow">The wall</p>
+      <h2>Wisdom so far</h2>
+      <div class="wall" id="wall" aria-live="polite">
+        <div class="wall-empty">Loading the wall&hellip;</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span class="mono">Rizz Airways &middot; KT2028 &middot; INV</span>
+    <span class="mono">Questions? Text Katie or Matt.</span>
+  </div>
+</footer>
+<script src="site.js"></script>
+</body>
+</html>

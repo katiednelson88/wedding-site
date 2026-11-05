@@ -1,0 +1,50 @@
+  <div class="pagehead">
+    <div class="wrap">
+      {{THISTLE}}
+      <p class="eyebrow">Unsolicited Advice</p>
+      <h1>Tell us what you know</h1>
+      <p class="lede">Planning tips, day-of wisdom, marriage advice, wildcard opinions. Everything goes on the wall below so it can spark ideas for everyone else.</p>
+    </div>
+  </div>
+
+  <section class="tight">
+    <div class="wrap">
+      <form class="form" id="advice-form" novalidate>
+        <div class="field">
+          <label for="category">What kind of advice?</label>
+          <select id="category" name="category">
+            <option>Planning</option>
+            <option>Day-of</option>
+            <option>Marriage</option>
+            <option>Wildcard</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="advice">Your wisdom</label>
+          <textarea id="advice" name="advice" placeholder="Pack a spare pair of socks. Scotland." maxlength="600"></textarea>
+          <p class="err" id="err-advice" hidden>Write a little something first.</p>
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label for="aname">Your name (optional)</label>
+            <input type="text" id="aname" name="name" autocomplete="name" placeholder="Auntie Mo">
+          </div>
+          <div class="field" style="align-content:end">
+            <label class="opt" style="justify-self:start"><input type="checkbox" id="showName" name="showName" checked><span>Show my name on the wall</span></label>
+          </div>
+        </div>
+        <div><button type="submit" class="btn">Post to the wall</button></div>
+        <div id="advice-status" tabindex="-1" role="status" hidden></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <p class="eyebrow">The wall</p>
+      <h2>Wisdom so far</h2>
+      <div class="wall" id="wall" aria-live="polite">
+        <div class="wall-empty">Loading the wall&hellip;</div>
+      </div>
+    </div>
+  </section>

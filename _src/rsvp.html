@@ -1,0 +1,116 @@
+  <div class="pagehead">
+    <div class="wrap">
+      {{THISTLE}}
+      <p class="eyebrow">RSVP</p>
+      <h1>Get on the manifest</h1>
+      <p class="lede">Formal invite to follow, but if you wanna RSVP now, that's totally cool too. One form per household is perfect.</p>
+    </div>
+  </div>
+
+  <section class="tight">
+    <div class="wrap">
+      <form class="form" id="rsvp-form" novalidate>
+        <div class="row2">
+          <div class="field">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Jamie Fraser">
+            <p class="err" id="err-name" hidden>Add your name so we know who's coming.</p>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="jamie@example.com">
+            <p class="err" id="err-email" hidden>Add an email so we can send you updates.</p>
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Are you coming?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="attending" value="Yes" id="att-yes"><span>Wouldn't miss it</span></label>
+            <label class="opt"><input type="radio" name="attending" value="Maybe" id="att-maybe"><span>Maybe</span></label>
+            <label class="opt"><input type="radio" name="attending" value="No" id="att-no"><span>Sadly, no</span></label>
+          </div>
+          <p class="err" id="err-attending" hidden>Pick one.</p>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Which days will you be there?</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="days" value="Fri" id="day-fri"><span>Fri: The &ldquo;I Do&rdquo; Bit</span></label>
+            <label class="opt"><input type="checkbox" name="days" value="Sat" id="day-sat"><span>Sat: Reception Rager</span></label>
+            <label class="opt"><input type="checkbox" name="days" value="Sun" id="day-sun"><span>Sun: The Debrief</span></label>
+          </div>
+          <p class="err" id="err-days" hidden>Pick at least one day.</p>
+        </fieldset>
+
+        <div class="row2">
+          <div class="field">
+            <label for="adults">Adults in your party (including you)</label>
+            <input type="number" id="adults" name="adults" min="0" max="12" value="1">
+          </div>
+          <div class="field">
+            <label for="kids">Kids coming</label>
+            <input type="number" id="kids" name="kids" min="0" max="12" value="0">
+          </div>
+        </div>
+        <div class="field">
+          <label for="kidsSeats">How many of the kids need their own seat?</label>
+          <input type="number" id="kidsSeats" name="kidsSeats" min="0" max="12" value="0" style="max-width:200px">
+        </div>
+        <div class="field">
+          <label for="partyNames">Names of everyone in your party</label>
+          <textarea id="partyNames" name="partyNames" placeholder="Jamie Fraser, Claire Fraser, Fergus (age 6)"></textarea>
+        </div>
+
+        <div class="row2">
+          <div class="field">
+            <label for="dietary">Dietary restrictions</label>
+            <textarea id="dietary" name="dietary" placeholder="Vegetarian, nut allergy, none"></textarea>
+          </div>
+          <div class="field">
+            <label for="songs">Song requests</label>
+            <textarea id="songs" name="songs" placeholder="The song that will get you on the dance floor"></textarea>
+          </div>
+        </div>
+
+        <fieldset class="field">
+          <legend>Where are you staying?</legend>
+          <p class="hint">Highly recommended: the lodges, with transport to the venue Friday and Saturday. Taxis and Ubers are very limited. Let us know by 1 March 2027.</p>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="lodging" value="Lodges" id="lodge-yes"><span>Include us at Kiltarlity Lodges</span></label>
+            <label class="opt"><input type="radio" name="lodging" value="Own" id="lodge-no"><span>We'll sort our own place</span></label>
+            <label class="opt"><input type="radio" name="lodging" value="Unsure" id="lodge-unsure"><span>Not sure yet</span></label>
+          </div>
+        </fieldset>
+
+        <div class="subform" id="lodge-details" hidden>
+          <fieldset class="field">
+            <legend>Which nights?</legend>
+            <p class="hint">Friday and Saturday are booked for sure. Thursday and Sunday depend on demand.</p>
+            <div class="opts">
+              <label class="opt"><input type="checkbox" name="nights" value="Thu" id="n-thu"><span>Thu</span></label>
+              <label class="opt"><input type="checkbox" name="nights" value="Fri" id="n-fri"><span>Fri</span></label>
+              <label class="opt"><input type="checkbox" name="nights" value="Sat" id="n-sat"><span>Sat</span></label>
+              <label class="opt"><input type="checkbox" name="nights" value="Sun" id="n-sun"><span>Sun</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>House preference</legend>
+            <p class="hint">It's cheaper the more people share. We'll do our best to work with everyone's budget.</p>
+            <div class="opts">
+              <label class="opt"><input type="radio" name="housing" value="Group" id="h-group"><span>Happy to share a house with a group</span></label>
+              <label class="opt"><input type="radio" name="housing" value="Solo" id="h-solo"><span>We'd rather be on our own</span></label>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="field">
+          <label for="notes">Anything else we should know?</label>
+          <textarea id="notes" name="notes" placeholder="Budget worries, accessibility needs, who you'd love to bunk with"></textarea>
+        </div>
+
+        <div><button type="submit" class="btn">Send RSVP</button></div>
+        <div id="rsvp-status" tabindex="-1" role="status" hidden></div>
+      </form>
+    </div>
+  </section>
