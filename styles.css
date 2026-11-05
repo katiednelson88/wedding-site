@@ -1,7 +1,7 @@
-/* Rizz Airways: a boarding-pass world on thistle lilac. Plum ink, marigold / tangerine / olive as tickets and stamps. */
+/* Rizz Airways: a boarding-pass world on warm cream. Plum ink, dragon fruit brights (hot pink, tangerine, marigold, olive, purple) as tickets and stamps. */
 :root{
-  --lilac:#ECDDFB; --paper:#F7F0FE; --ink:#2B0F33; --ink-soft:#5A3866;
-  --pink:#C4155F; --marigold:#F9AF08; --tangerine:#F06707; --olive:#BBB256; --olive-deep:#6E6A16; --purple:#68367F;
+  --ground:#FFF8EF; --paper:#FFFDF9; --ink:#2B0F33; --ink-soft:#5A3866;
+  --pink:#E11C8A; --pink-card:#D0177F; --orange-text:#D65A00; --marigold:#F9AF08; --tangerine:#F06707; --olive:#BBB256; --olive-deep:#6E6A16; --purple:#68367F;
   --display:'Archivo Black','Arial Black',Impact,sans-serif;
   --body:'Bricolage Grotesque',system-ui,-apple-system,'Segoe UI',sans-serif;
   --mono:'Space Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -10,7 +10,7 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--lilac);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
 img{max-width:100%}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--pink);outline-offset:3px}
@@ -19,10 +19,10 @@ a{color:inherit}
 .ph{background:rgba(249,175,8,.35);padding:0 4px;border-radius:4px}
 
 /* header */
-header.site{border-bottom:3px solid var(--ink);background:var(--lilac)}
+header.site{border-bottom:3px solid var(--ink);background:var(--ground)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:14px}
 .logo{font-family:var(--display);font-size:20px;text-decoration:none;display:flex;align-items:center;gap:10px}
-.logo span{background:var(--ink);color:var(--lilac);padding:4px 8px;border-radius:6px;font-size:14px}
+.logo span{background:var(--ink);color:var(--ground);padding:4px 8px;border-radius:6px;font-size:14px}
 nav ul{list-style:none;margin:0;padding:0;display:flex;gap:4px 18px;flex-wrap:wrap;align-items:center}
 nav a{text-decoration:none;font-weight:600;font-size:15px;padding:6px 2px;border-bottom:2px solid transparent}
 nav a:hover{border-bottom-color:var(--tangerine)}
@@ -38,7 +38,7 @@ nav .btn[aria-current="page"]{background:var(--ink)}
 /* hero (home) */
 .hero .wrap{padding-block:56px 40px;display:grid;gap:28px;position:relative}
 .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(44px,8.4vw,108px);line-height:.92;letter-spacing:-.02em;margin:0;text-wrap:balance;max-width:14ch}
-.k{color:var(--pink)} .m{color:var(--olive-deep)}
+.k{color:var(--pink)} .m{color:var(--orange-text)}
 .amp{display:inline-block;color:var(--tangerine);transform:rotate(-8deg)}
 .hero .sub{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:20px;font-weight:600}
 .hero .sub div{display:flex;flex-direction:column}
@@ -54,7 +54,7 @@ nav .btn[aria-current="page"]{background:var(--ink)}
 .pagehead p.lede{font-size:20px;max-width:56ch;margin:0}
 .pagehead .thistle{width:120px;top:32px}
 
-.strip{background:var(--ink);color:var(--lilac)}
+.strip{background:var(--ink);color:var(--ground)}
 .strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px 28px;flex-wrap:wrap;padding-block:18px}
 .count{font-family:var(--display);font-size:clamp(30px,5vw,44px);color:var(--marigold);font-variant-numeric:tabular-nums}
 
@@ -82,7 +82,7 @@ a.day:hover{transform:rotate(-1deg) translateY(-3px)}
 .day h3{font-size:28px}
 .day p{margin:0}
 .day .wear{margin-top:auto;padding-top:12px;border-top:2px dashed currentColor;font-size:15px}
-.d1{background:var(--marigold)} .d2{background:var(--tangerine)} .d3{background:var(--olive)}
+.d1{background:var(--pink-card);color:#fff} .d2{background:var(--marigold)} .d3{background:var(--olive)}
 
 /* full day blocks (plan page) */
 .dayblock{border:3px solid var(--ink);border-radius:24px;overflow:hidden;background:var(--paper)}
@@ -101,7 +101,7 @@ a.day:hover{transform:rotate(-1deg) translateY(-3px)}
 .rain{background:var(--purple);color:#fff;border-radius:20px;padding:24px 28px;display:flex;gap:16px 32px;flex-wrap:wrap;align-items:center;margin-top:24px}
 .rain strong{font-family:var(--display);font-size:24px;font-weight:400}
 .rain ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
-.rain li{background:var(--lilac);color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:600;font-size:15px}
+.rain li{background:var(--ground);color:var(--ink);border-radius:999px;padding:4px 12px;font-weight:600;font-size:15px}
 .callout{background:var(--marigold);border:3px solid var(--ink);border-radius:18px;padding:18px 22px}
 .callout p{margin:0}
 .callout strong{font-family:var(--display);font-weight:400}
@@ -168,7 +168,7 @@ input:focus,select:focus,textarea:focus{outline:3px solid var(--pink);outline-of
 .opt input:focus-visible + span{outline:3px solid var(--pink);outline-offset:2px}
 .row2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media (max-width:600px){.row2{grid-template-columns:minmax(0,1fr)}}
-.subform{border-left:0;background:var(--lilac);border-radius:18px;padding:18px;display:grid;gap:18px}
+.subform{border-left:0;background:var(--ground);border-radius:18px;padding:18px;display:grid;gap:18px}
 .err{color:#A0103F;font-size:14px;font-weight:700;margin:0}
 .status{border-radius:16px;padding:16px 18px;font-weight:600}
 .status.ok{background:var(--olive)}
