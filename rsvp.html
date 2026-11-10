@@ -100,6 +100,7 @@
         <fieldset class="field">
           <legend>Where are you staying?</legend>
           <p class="hint">Highly recommended: the lodges, with transport to the venue Friday and Saturday. Taxis and Ubers are very limited. Let us know by 1 March 2027.</p>
+          <p class="hint">Take a look at the lodges here: <a href="https://solidluxury.co.uk/location/kiltarlity-lodges/" target="_blank" rel="noopener">Kiltarlity Lodges on Solid Luxury</a></p>
           <div class="opts">
             <label class="opt"><input type="radio" name="lodging" value="Lodges" id="lodge-yes"><span>Include us at Kiltarlity Lodges</span></label>
             <label class="opt"><input type="radio" name="lodging" value="Own" id="lodge-no"><span>We'll sort our own place</span></label>
@@ -110,7 +111,7 @@
         <div class="subform" id="lodge-details" hidden>
           <fieldset class="field">
             <legend>Which nights?</legend>
-            <p class="hint">Friday and Saturday are booked for sure. Thursday and Sunday depend on demand.</p>
+            <p class="hint">Thursday and Sunday depend on demand.</p>
             <div class="opts">
               <label class="opt"><input type="checkbox" name="nights" value="Thu" id="n-thu"><span>Thu</span></label>
               <label class="opt"><input type="checkbox" name="nights" value="Fri" id="n-fri"><span>Fri</span></label>
@@ -120,17 +121,21 @@
           </fieldset>
           <fieldset class="field">
             <legend>House preference</legend>
-            <p class="hint">It's cheaper the more people share. We'll do our best to work with everyone's budget.</p>
-            <div class="opts">
+                        <div class="opts">
               <label class="opt"><input type="radio" name="housing" value="Group" id="h-group"><span>Happy to share a house with a group</span></label>
               <label class="opt"><input type="radio" name="housing" value="Solo" id="h-solo"><span>We'd rather be on our own</span></label>
             </div>
           </fieldset>
+          <div class="field">
+            <label for="bunkWith">Who would you most like to bunk with?</label>
+            <p class="hint">Each couple or family gets their own room. This is just for fun, and we'll do our best.</p>
+            <textarea id="bunkWith" name="bunkWith" placeholder="Names of the people you'd love to share a house with"></textarea>
+          </div>
         </div>
 
         <div class="field">
           <label for="notes">Anything else we should know?</label>
-          <textarea id="notes" name="notes" placeholder="Budget worries, accessibility needs, who you'd love to bunk with"></textarea>
+          <textarea id="notes" name="notes" placeholder="budget concerns, accessibility needs, a dad joke"></textarea>
         </div>
 
         <div><button type="submit" class="pill">Send RSVP</button></div>

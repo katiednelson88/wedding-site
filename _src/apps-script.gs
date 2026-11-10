@@ -23,7 +23,7 @@ function doPost(e) {
         now, clean(d.name), clean(d.email), clean(d.attending), clean(d.days),
         Number(d.adults) || 0, Number(d.kids) || 0, Number(d.kidsSeats) || 0,
         clean(d.partyNames), clean(d.dietary), clean(d.songs), clean(d.lodging),
-        clean(d.nights), clean(d.housing), clean(d.notes)
+        clean(d.nights), clean(d.housing), clean(d.notes), clean(d.bunkWith)
       ]);
     } else if (d.type === 'advice') {
       ss.getSheetByName('Advice').appendRow([

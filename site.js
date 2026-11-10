@@ -74,6 +74,7 @@ var SITE_CONFIG = {
         lodging: (rsvp.querySelector('input[name="lodging"]:checked') || {}).value || '',
         nights: checked(rsvp, 'nights').join(', '),
         housing: (rsvp.querySelector('input[name="housing"]:checked') || {}).value || '',
+        bunkWith: rsvp.bunkWith.value.trim(),
         notes: rsvp.notes.value.trim()
       };
       var status = document.getElementById('rsvp-status');
