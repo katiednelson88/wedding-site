@@ -2,18 +2,276 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ktizzle &amp; MattyRizz — Save that date Dawg</title>
-<meta name="description" content="Ktizzle and MattyRizz are getting married in Kiltarlity, Scotland, 26–28 May 2028.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KTizzle &amp; MattyRizz</title>
+<meta name="description" content="KTizzle and MattyRizz are getting married in Kiltarlity, Scotland, 26 to 28 May 2028.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin: 0; min-height: 100%; background: #f9df9b; }
-  .save-the-date { display: block; width: 100%; height: auto; max-width: 1024px; margin: 0 auto; }
+/* Layout: poster-length home page. Hero = [cow + thistles | wedding details under a hanging disco ball | tilted polaroid of us].
+   Then the lavender WEDDING WEEKEND band, three paper cards, landscape with the countdown card pinned over its corner.
+   Words are live text; each illustration sits in its own space, never over text. */
+:root{
+  --cream:#FCEDCE; --paper:#FFF8EA; --orange:#E85A06; --coral:#DE544E; --red:#D7302A; --red-soft:#F4B3AC;
+  --blue:#23468C; --blue-soft:#C9D6EE; --pink:#EE6E8E; --pink-paper:#F8CBC4;
+  --display:'Luckiest Guy','Arial Black',Impact,sans-serif;
+  --hand:'Luckiest Guy','Arial Black',Impact,sans-serif; --navtext:#A33C04; --lilac:#EAD6F0;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:clip}
+body{margin:0}
+body{background-color:var(--cream);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .35 0 0 0 0 .2 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  color:var(--blue);font-family:var(--hand);font-size:18px;line-height:1.35;letter-spacing:.03em;font-synthesis:none}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.gut{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1160px;margin:0 auto}
+.star{display:block;width:var(--s,24px);height:var(--s,24px);flex:0 0 auto}
+.star.r{color:var(--red);--f:var(--red-soft)} .star.b{color:var(--blue);--f:var(--blue-soft)} .star.p{color:var(--pink);--f:#FBD3DD}
+.torn{clip-path:polygon(0 8%,4% 0,11% 5%,19% 1%,27% 6%,36% 0,45% 4%,54% 1%,63% 5%,72% 0,81% 4%,90% 1%,97% 5%,100% 0,99% 30%,100% 55%,98% 78%,100% 100%,93% 95%,85% 100%,76% 96%,67% 100%,58% 95%,49% 100%,40% 96%,31% 100%,22% 95%,13% 100%,5% 96%,0 100%,1% 70%,0 45%,2% 22%)}
+
+/* menu bar */
+.top{background:var(--lilac)}
+.nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px 40px;padding-block:18px}
+.nav a{text-decoration:none;font-size:19px;letter-spacing:.1em;text-transform:uppercase;color:var(--navtext);padding:4px 0;border-bottom:3px solid transparent}
+.nav a:hover,.nav a[aria-current="page"]{border-bottom-color:var(--navtext)}
+.nav .brand{font-size:34px;letter-spacing:.02em;text-transform:none;color:var(--orange);border:0;padding-inline:6px}
+@media (max-width:760px){.nav{gap:4px 20px}.nav .brand{order:-1;flex-basis:100%;text-align:center;font-size:30px}.nav a{font-size:17px}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.25fr) minmax(0,1fr);grid-template-areas:"art details photo";gap:0 24px;align-items:center;padding-block:4px 30px}
+.h-art{grid-area:art;display:flex;flex-direction:column;align-items:flex-start}
+.h-art .cow{width:132%;max-width:none;margin-left:-34%}
+.h-details{grid-area:details;display:flex;flex-direction:column;align-items:center;text-align:center}
+.disco-wrap{position:relative;width:clamp(110px,12vw,150px);margin:0 0 30px}
+.disco-wrap .rays{position:absolute;left:-34px;top:14px;width:calc(100% + 68px);height:calc(100% - 10px);pointer-events:none}
+h1{font-family:var(--display);font-weight:400;color:var(--orange);font-size:clamp(46px,5.8vw,76px);line-height:.98;letter-spacing:.01em;margin:0 0 16px}
+h1 span{display:block}
+h1 .amp{color:var(--coral);display:inline}
+.tape{background:var(--paper);padding:10px 34px 12px;transform:rotate(-1.5deg);box-shadow:0 3px 10px rgba(80,50,20,.12)}
+.tape p{margin:0;font-size:clamp(28px,3vw,40px);line-height:1.05}
+.swoosh{display:block;height:16px;width:min(380px,88%);margin:-6px auto 0}
+.place{margin:6px 0 0;font-size:clamp(19px,1.9vw,24px);text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.btn{display:inline-block;text-decoration:none;font-family:var(--display);font-size:19px;letter-spacing:.03em;padding:12px 24px 9px;border-radius:999px;background:var(--orange);color:#fff;box-shadow:3px 4px 0 var(--blue);transition:transform .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 3px var(--blue)}
+
+.h-photo{grid-area:photo;position:relative;justify-self:center;width:min(380px,100%);padding:26px 10px 30px}
+.polaroid{background:#fff;padding:14px 14px 46px;margin:0;box-shadow:0 10px 24px rgba(80,50,20,.2);transform:rotate(3deg)}
+.polaroid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
+.polaroid figcaption{font-size:22px;text-align:center;margin-top:10px}
+.tape-strip{position:absolute;top:14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-5deg);background:rgba(238,110,142,.5)}
+.stamp{position:absolute;top:-4px;right:-18px;transform:rotate(9deg);background:var(--paper);padding:5px;box-shadow:0 3px 8px rgba(80,50,20,.18)}
+.stamp-in{border:2px dashed var(--blue);padding:8px 12px 6px;text-align:center;font-size:16px;line-height:1.05}
+.stamp-in svg{display:block;margin:3px auto 0}
+.h-photo .s1{position:absolute;left:-18px;bottom:60px}
+
+/* big weekend */
+.plan-band{background:var(--lilac);margin-top:10px}
+.plan-band.gut{padding-inline:0}
+.banner-row{display:flex;align-items:center;padding-block:14px}
+.banner-row .sp{flex:1 1 0;min-width:8px}
+.banner-row h2{flex:0 1 auto}
+.banner-row .flag{flex:0 0 auto;width:150px;max-width:150px;margin:-44px 0 -64px;transform:rotate(-6deg);position:relative;z-index:2}
+.banner-row .thistle{flex:0 0 auto;width:124px;max-width:124px;margin:-81px 0 -35px;justify-self:center;transform:rotate(14deg);position:relative;z-index:2}
+.banner-row h2{margin:0;text-align:center;font-family:var(--display);font-weight:400;color:var(--orange);font-size:clamp(32px,4vw,52px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
+
+.cards-row{display:grid;grid-template-columns:minmax(0,140px) minmax(0,1fr);gap:14px;align-items:stretch;margin-top:26px}
+.rail{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;padding-top:40px}
+.rail .thistle{width:130px;transform:rotate(-30deg)}
+.rail .snuff{width:130px;transform:rotate(-8deg)}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:var(--paper);box-shadow:inset 0 0 26px rgba(190,150,90,.22),0 4px 12px rgba(80,50,20,.14);padding:20px 18px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
+.card:nth-child(1){transform:rotate(-1.6deg)} .card:nth-child(2){transform:rotate(1deg)} .card:nth-child(3){transform:rotate(-.8deg)}
+.card h3{margin:0;font-size:22px;line-height:1.1;text-transform:uppercase;min-height:2.2em;display:flex;align-items:center}
+.card .uline{width:70%;height:10px;display:block;margin-top:-4px}
+.ill{position:relative;height:190px;width:100%;display:flex;align-items:center;justify-content:center;padding:6px 34px}
+.ill img{max-height:100%;width:auto;max-width:100%}
+.ill .star{position:absolute}
+.zzz{position:absolute;top:8px;right:16px;font-size:26px;line-height:.8;transform:rotate(-8deg)}
+.zzz small{font-size:18px}
+.card p{margin:0;font-size:20px;line-height:1.25}
+
+/* landscape + countdown */
+.bottom{position:relative;margin-top:34px;padding-bottom:40px}
+.land{width:68%;margin-left:7%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 90%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 90%,transparent 100%)}
+.bottom .t1{position:absolute;right:12%;bottom:290px;width:96px}
+.bottom .t2{position:absolute;left:30px;bottom:24px;width:150px;transform:rotate(-20deg)}
+.bottom .sky{position:absolute}
+.count{position:absolute;right:3%;bottom:70px;width:min(260px,30%);background:var(--pink-paper);padding:20px 18px 16px;transform:rotate(2.5deg);box-shadow:0 5px 14px rgba(80,50,20,.18);text-align:center}
+.count h2{margin:0 0 6px;font-weight:400;font-size:26px;line-height:1.1;letter-spacing:.06em;text-transform:uppercase}
+.days{margin:0;display:flex;flex-direction:column;align-items:center}
+.days b{font-weight:400;color:var(--orange);font-size:clamp(56px,6vw,76px);line-height:1;font-variant-numeric:tabular-nums}
+.days span{font-size:20px;letter-spacing:.1em;text-transform:uppercase}
+.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.clock div{display:flex;flex-direction:column;align-items:center;padding:0 4px;border-left:2px solid rgba(35,70,140,.5)}
+.clock div:first-child{border-left:0}
+.clock b{font-family:var(--display);font-weight:400;color:var(--orange);font-size:clamp(28px,3.2vw,40px);line-height:1;font-variant-numeric:tabular-nums}
+.clock span{font-size:15px;text-transform:uppercase}
+.count svg{display:block;margin:10px auto 0}
+
+/* tablet and phone */
+@media (max-width:920px){
+  .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "details" "photo";gap:10px}
+  .h-art{flex-direction:row;align-items:flex-end;justify-content:center;gap:0}
+  .h-art .cow{width:min(300px,62%);margin:0}
+  .h-art .thistle-up{width:64px!important}
+  .h-art .thistle-flat{display:none}
+  .disco-wrap{margin-top:0}
+  .h-photo{width:min(340px,92%)}
+  .cards-row{grid-template-columns:minmax(0,1fr)}
+  .rail{flex-direction:row;justify-content:center;padding-top:0;order:2;gap:26px}
+  .rail .thistle{width:110px}
+  .rail .snuff{width:110px;margin-top:0}
+  .cards{grid-template-columns:minmax(0,1fr);max-width:400px;margin:0 auto;gap:28px}
+  .banner-row .sp{min-width:6px}
+  .banner-row .flag{width:84px;max-width:84px;margin:-26px 0 -34px}
+  .banner-row .thistle{width:66px;max-width:66px;margin:-38px 0 -22px}
+  .rail{padding-top:0}
+  .land{width:100%;margin-left:0;-webkit-mask-image:none;mask-image:none}
+  .bottom .t1,.bottom .t2,.bottom .sky{display:none}
+  .count{position:relative;right:auto;bottom:auto;width:min(360px,100%);margin:-30px auto 0}
+}
+@media (max-width:520px){
+  .nav a{font-size:18px}
+  .tape{padding:8px 18px 10px}
+  .tape p{font-size:28px}
+  .stamp{right:-6px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
-<main>
-  <img class="save-the-date" src="homepage-poster-base.png" alt="Ktizzle and MattyRizz save the date — Kiltarlity, Scotland, May 26–28, 2028">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="st" viewBox="0 0 32 32"><path d="M16 2.5 L19.8 11.2 L29.2 11.9 L22 18.2 L24.3 27.6 L16 22.4 L7.7 27.6 L10 18.2 L2.8 11.9 L12.2 11.2 Z" fill="var(--f)" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="top gut">
+  <nav class="nav" aria-label="Main">
+    <a href="./" aria-current="page">The Lore</a>
+    <a href="plan.html">The Plan</a>
+    <a class="brand" href="./">KTizzle + MattyRizz</a>
+    <a href="guide.html">Survival Guide</a>
+    <a href="advice.html">Advice</a>
+    <a href="rsvp.html">RSVP</a>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="gut">
+    <div class="wrap hero">
+      <div class="h-art">
+        <img class="thistle-up" src="art/thistle-up.webp" alt="" style="width:110px;transform:rotate(-12deg);margin:0 0 -10px 30%">
+        <img class="cow" src="art/cow.webp" alt="">
+      </div>
+
+      <div class="h-details">
+        <div class="disco-wrap">
+          <svg class="rays" viewBox="0 0 240 200" preserveAspectRatio="none" aria-hidden="true"><g stroke="#23468C" stroke-width="5" stroke-linecap="round"><path d="M14 120 L40 116"/><path d="M22 66 L46 82"/><path d="M58 30 L70 54"/><path d="M226 120 L200 116"/><path d="M218 66 L194 82"/><path d="M182 30 L170 54"/></g></svg>
+          <img src="art/disco.webp" alt="">
+        </div>
+        <h1><span>KTizzle <span class="amp">&amp;</span></span><span>MattyRizz</span><span>are getting</span><span>married</span></h1>
+        <p class="place"><span style="white-space:nowrap">Kiltarlity, Scotland</span> &middot; <span style="white-space:nowrap">May 26&ndash;28, 2028</span></p>
+        <div class="btns">
+          <a class="btn" href="rsvp.html">RSVP now</a>
+          <a class="btn ghost" href="guide.html">The guide</a>
+        </div>
+      </div>
+
+      <div class="h-photo">
+        <figure class="polaroid">
+          <img src="img/hero.jpg" alt="Katie and Matt striking a dramatic dance pose on a garden lawn, dressed up for a party" width="1100" height="1467">
+        </figure>
+        <span class="tape-strip" aria-hidden="true"></span>
+        <svg class="star b s1" style="--s:28px" aria-hidden="true"><use href="#st"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="plan-band gut" id="weekend">
+      <div class="banner-row">
+        <span class="sp"></span>
+        <img class="flag" src="art/flag.webp" alt="">
+        <span class="sp"></span>
+        <h2>The Wedding Weekend</h2>
+        <span class="sp"></span>
+        <img class="thistle" src="art/thistle-up.webp" alt="">
+        <span class="sp"></span>
+      </div>
+  </div>
+
+  <section class="gut">
+    <div class="wrap">
+
+      <div class="cards-row">
+        <div class="rail">
+          <img class="snuff" src="art/snuff.webp" alt="">
+          <svg class="star b" style="--s:26px" aria-hidden="true"><use href="#st"/></svg>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Fri 26 &middot; The Wedding</h3>
+            <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 6 C60 2 120 9 196 5" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
+            <div class="ill">
+              <svg class="star b" style="--s:22px;left:6px;top:18px" aria-hidden="true"><use href="#st"/></svg>
+              <img src="art/coupe.webp" alt="">
+              <svg class="star r" style="--s:20px;right:8px;bottom:22px" aria-hidden="true"><use href="#st"/></svg>
+            </div>
+            <p>Kick things off in Kiltarlity!</p>
+          </article>
+          <article class="card">
+            <h3>Sat 27 &middot; Reception Costume Party</h3>
+            <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 5 C70 9 130 2 196 6" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
+            <div class="ill" style="padding-inline:10px">
+              <img src="art/castle.webp" alt="">
+            </div>
+            <p>Eat, drink, and get costumed!</p>
+          </article>
+          <article class="card">
+            <h3>Sun 28 &middot; Recovery</h3>
+            <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 6 C60 2 120 9 196 5" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
+            <div class="ill">
+              <svg class="star p" style="--s:22px;left:4px;top:50%" aria-hidden="true"><use href="#st"/></svg>
+              <img src="art/sheep-a.webp" alt="">
+              <span class="zzz" aria-hidden="true"><small>z</small> z<br>&nbsp;&nbsp;Z</span>
+            </div>
+            <p>Brunch, goodbyes, and one last hurrah.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gut">
+    <div class="wrap bottom">
+      <svg class="star p sky" style="--s:24px;left:16%;top:-10px" aria-hidden="true"><use href="#st"/></svg>
+      <svg class="star b sky" style="--s:24px;left:24%;top:-24px" aria-hidden="true"><use href="#st"/></svg>
+      <svg class="star p sky" style="--s:24px;left:66%;top:-18px" aria-hidden="true"><use href="#st"/></svg>
+      <img class="land" src="art/land.webp" alt="Watercolour of a Highland town by a river, with a stone bridge and hills behind">
+      <img class="thistle t1" src="art/thistle-up.webp" alt="" style="transform:rotate(8deg)">
+      <div class="count torn" role="timer" aria-live="off">
+        <h2>Countdown</h2>
+        <p class="days"><b id="cd-d">562</b><span>Days</span></p>
+        <svg width="200" height="12" viewBox="0 0 200 12" aria-hidden="true"><path d="M6 7 C60 2 130 11 194 5" fill="none" stroke="#23468C" stroke-width="3" stroke-linecap="round"/></svg>
+      </div>
+    </div>
+  </section>
 </main>
+
+<script>
+(function(){
+  // Midnight on 26 May 2028 in Scotland (BST, UTC+1)
+  var target=Date.UTC(2028,4,25,23,0,0);
+  var d=document.getElementById('cd-d');
+  function tick(){ d.textContent=Math.max(0,Math.ceil((target-Date.now())/86400000)); }
+  tick(); setInterval(tick,60000);
+})();
+</script>
+
 </body>
 </html>
