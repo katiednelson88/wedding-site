@@ -90,9 +90,11 @@ h1 .amp{color:var(--coral);display:inline}
 .lore{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:52px 20px}
 .lore p{margin:0 0 18px;max-width:52ch;font-family:var(--read);font-weight:400;font-size:24px;line-height:1.45;letter-spacing:.01em}
 .ph{background:rgba(238,110,142,.25);padding:0 6px;border-radius:4px}
-.circle-wrap{position:relative;justify-self:center;width:min(420px,100%)}
-.circle{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 10px 24px rgba(80,50,20,.18)}
-.circle-wrap .thistle{position:absolute;left:-34px;bottom:-14px;width:96px;transform:rotate(-12deg)}
+.circle-wrap{position:relative;justify-self:center;width:min(400px,100%);padding:20px 8px 10px}
+.lore-pol{transform:rotate(-3deg)}
+.lore-pol img{aspect-ratio:1/1}
+.circle-wrap .tape-strip{top:8px;transform:translateX(-50%) rotate(4deg)}
+.circle-wrap .thistle{position:absolute;z-index:2;left:-34px;bottom:-14px;width:96px;transform:rotate(-12deg)}
 .circle-wrap .star{position:absolute}
 
 /* need to know */
@@ -284,7 +286,8 @@ h1 .amp{color:var(--coral);display:inline}
         <p>Short version: two people with excellent nicknames decided to make it official, and they want all of you in a mill in the Highlands to celebrate.</p>
       </div>
       <div class="circle-wrap">
-        <img class="circle" src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800">
+        <figure class="polaroid lore-pol"><img src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800"></figure>
+        <span class="tape-strip" aria-hidden="true"></span>
         <img class="thistle" src="art/thistle-up.webp" alt="">
         <svg class="star b" style="--s:26px;right:2%;top:4%" aria-hidden="true"><use href="#st"/></svg>
         <svg class="star p" style="--s:22px;right:-6%;top:18%" aria-hidden="true"><use href="#st"/></svg>
