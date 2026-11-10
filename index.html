@@ -6,7 +6,7 @@
 <title>KTizzle &amp; MattyRizz</title>
 <meta name="description" content="KTizzle and MattyRizz are getting married in Kiltarlity, Scotland, 26 to 28 May 2028.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;500;600&display=swap">
 <style>
 /* Layout: poster-length home page. Hero = [cow + thistles | wedding details under a hanging disco ball | tilted polaroid of us].
    Then lavender bands introduce each part: Wedding Weekend (day cards), How We Got Here (story + photo), Need to Know
@@ -15,6 +15,7 @@
 :root{
   --cream:#FCEDCE; --paper:#FFF8EA; --orange:#E85A06; --coral:#DE544E; --red:#D7302A; --red-soft:#F4B3AC;
   --blue:#23468C; --blue-soft:#C9D6EE; --pink:#EE6E8E; --pink-paper:#F8CBC4;
+  --read:'Fredoka','Nunito','Trebuchet MS',system-ui,sans-serif;
   --display:'Luckiest Guy','Arial Black',Impact,sans-serif;
   --hand:'Luckiest Guy','Arial Black',Impact,sans-serif; --navtext:#A33C04; --lilac:#EAD6F0;
   color-scheme:light;
@@ -75,11 +76,19 @@ h1 .amp{color:var(--coral);display:inline}
 .plan-band{background:var(--lilac);margin-top:10px}
 .plan-band.gut{padding-inline:0}
 .plan-band.gap{margin-top:60px}
+.ph-img{flex:0 0 auto;position:relative;z-index:2;display:flex;align-items:center;justify-content:center;border:3px dashed var(--navtext);border-radius:12px;background:rgba(255,248,234,.8);color:var(--navtext);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.ph-img.left{width:150px;height:170px;margin:-44px 0 -64px;transform:rotate(-6deg)}
+.ph-img.right{width:124px;height:186px;margin:-81px 0 -35px;transform:rotate(14deg)}
+/* band lettering: trim the font's empty space above and below so the letters sit dead centre */
+@supports (text-box: trim-both cap alphabetic){
+  .banner-row h2,.foot p{text-box:trim-both cap alphabetic}
+  .banner-row{padding-block:22px}
+}
 .foot p{margin:0;text-align:center;color:var(--orange);font-size:clamp(22px,2.8vw,34px);line-height:1.1;letter-spacing:.03em;text-transform:uppercase}
 
 /* how we got here */
 .lore{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:52px 20px}
-.lore p{margin:0 0 18px;max-width:50ch;font-size:21px;line-height:1.45}
+.lore p{margin:0 0 18px;max-width:52ch;font-family:var(--read);font-weight:500;font-size:21px;line-height:1.55;letter-spacing:0}
 .ph{background:rgba(238,110,142,.25);padding:0 6px;border-radius:4px}
 .circle-wrap{position:relative;justify-self:center;width:min(420px,100%)}
 .circle{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 10px 24px rgba(80,50,20,.18)}
@@ -92,7 +101,7 @@ h1 .amp{color:var(--coral);display:inline}
 .tile:nth-child(1){transform:rotate(-1deg)} .tile:nth-child(2){transform:rotate(1deg)}
 .tile .art{height:130px;width:auto;max-width:100%}
 .tile h3{margin:0;color:var(--orange);font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
-.tile p{margin:0;max-width:44ch;font-size:20px;line-height:1.4}
+.tile p{margin:0;max-width:46ch;font-family:var(--read);font-weight:500;font-size:19px;line-height:1.5;letter-spacing:0}
 .tile .btn{margin-top:6px}
 .banner-row{display:flex;align-items:center;padding-block:14px}
 .banner-row .sp{flex:1 1 0;min-width:8px}
@@ -157,6 +166,9 @@ h1 .amp{color:var(--coral);display:inline}
   .banner-row .sp{min-width:6px}
   .banner-row .flag{width:84px;max-width:84px;margin:-26px 0 -34px}
   .banner-row .thistle{width:66px;max-width:66px;margin:-38px 0 -22px}
+  .ph-img{font-size:11px;border-width:2px}
+  .ph-img.left{width:84px;height:95px;margin:-26px 0 -34px}
+  .ph-img.right{width:66px;height:99px;margin:-38px 0 -22px}
   .rail{padding-top:0}
   .land{width:100%;margin-left:0;-webkit-mask-image:none;mask-image:none}
   .bottom .t1,.bottom .t2,.bottom .sky{display:none}
@@ -274,7 +286,7 @@ h1 .amp{color:var(--coral);display:inline}
   </section>
 
   <div class="plan-band gut gap" id="lore">
-    <div class="banner-row"><span class="sp"></span><h2>How We Got Here</h2><span class="sp"></span></div>
+    <div class="banner-row"><span class="sp"></span><div class="ph-img left" aria-hidden="true">Image</div><span class="sp"></span><h2>How We Got Here</h2><span class="sp"></span><div class="ph-img right" aria-hidden="true">Image</div><span class="sp"></span></div>
   </div>
   <section class="gut">
     <div class="wrap lore">
@@ -292,7 +304,7 @@ h1 .amp{color:var(--coral);display:inline}
   </section>
 
   <div class="plan-band gut gap" id="info">
-    <div class="banner-row"><span class="sp"></span><h2>Need to Know</h2><span class="sp"></span></div>
+    <div class="banner-row"><span class="sp"></span><div class="ph-img left" aria-hidden="true">Image</div><span class="sp"></span><h2>Need to Know</h2><span class="sp"></span><div class="ph-img right" aria-hidden="true">Image</div><span class="sp"></span></div>
   </div>
   <section class="gut">
     <div class="wrap info">
