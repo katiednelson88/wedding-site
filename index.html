@@ -66,7 +66,7 @@ h1 .amp{color:var(--coral);display:inline}
 .h-photo{grid-area:photo;position:relative;justify-self:center;width:min(380px,100%);padding:26px 10px 30px}
 .polaroid{background:#fff;padding:14px 14px 46px;margin:0;box-shadow:0 10px 24px rgba(80,50,20,.2);transform:rotate(3deg)}
 .polaroid img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 40%}
-.polaroid figcaption{font-size:22px;text-align:center;margin-top:10px}
+.polaroid figcaption{font-family:var(--read);font-weight:400;font-size:22px;line-height:1.2;text-align:center;margin-top:10px;color:var(--blue)}
 .tape-strip{position:absolute;top:14px;left:50%;width:110px;height:30px;transform:translateX(-50%) rotate(-5deg);background:rgba(238,110,142,.5)}
 .stamp{position:absolute;top:-4px;right:-18px;transform:rotate(9deg);background:var(--paper);padding:5px;box-shadow:0 3px 8px rgba(80,50,20,.18)}
 .stamp-in{border:2px dashed var(--blue);padding:8px 12px 6px;text-align:center;font-size:16px;line-height:1.05}
@@ -184,7 +184,7 @@ h1 .amp{color:var(--coral);display:inline}
   .h-art .cow{width:84px;max-width:none;margin:0}
   .hero-thistle{display:block;position:absolute;right:4px;top:158px;width:56px;height:auto;transform:rotate(-35deg);z-index:2}
   .hero h1{margin-top:12px;position:relative;z-index:1;left:10px}
-  .hero .polaroid{padding-bottom:30px}
+  .hero .polaroid{padding-bottom:44px}
   .lore > div:first-child{border:2px solid var(--blue);border-radius:14px;padding:18px 18px 4px;background:var(--paper)}
   .lore > div:first-child p:last-child{margin-bottom:14px}
   .h-photo{grid-area:photo;top:18px}
@@ -263,7 +263,8 @@ h1 .amp{color:var(--coral);display:inline}
       <div class="h-photo">
         <figure class="polaroid">
           <img src="img/hero.jpg" alt="Katie and Matt striking a dramatic dance pose on a garden lawn, dressed up for a party" width="1100" height="1467">
-                </figure>
+          <figcaption>to haggis and to hold</figcaption>
+        </figure>
         <span class="tape-strip" aria-hidden="true"></span>
         <svg class="star b s1" style="--s:28px" aria-hidden="true"><use href="#st"/></svg>
       </div>
@@ -337,7 +338,9 @@ h1 .amp{color:var(--coral);display:inline}
         <p>LOVE YOU ALL! SEE YEW IN SCOTLAND!!</p>
       </div>
       <div class="circle-wrap">
-        <figure class="polaroid lore-pol"><img src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800"></figure>
+        <figure class="polaroid lore-pol"><img src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800">
+          <figcaption>help us finally loch it down</figcaption>
+        </figure>
         <span class="tape-strip" aria-hidden="true"></span>
         <img class="thistle" src="art/thistle-up.webp" alt="">
         <svg class="star b" style="--s:26px;right:2%;top:4%" aria-hidden="true"><use href="#st"/></svg>
