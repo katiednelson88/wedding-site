@@ -178,10 +178,10 @@ h1 .amp{color:var(--coral);display:inline}
   .hero h1{grid-area:h1;align-self:end}
   .hero .place{grid-area:place;align-self:start;background:var(--lilac);margin:0 -16px;padding:12px 16px 0;line-height:1.25}
   .hero .btns{grid-area:btns;background:var(--lilac);margin:-4px -16px 0;padding:12px 16px 16px}
-  .h-art{display:block;position:absolute;left:-7px;top:150px;width:84px;z-index:2;margin:0}
+  .h-art{display:block;position:absolute;left:3px;top:150px;width:84px;z-index:2;margin:0}
   .h-art .cow{width:84px;max-width:none;margin:0}
-  .hero-thistle{display:block;position:absolute;right:14px;top:158px;width:56px;height:auto;transform:rotate(-35deg);z-index:2}
-  .hero h1{margin-top:12px;position:relative;z-index:1}
+  .hero-thistle{display:block;position:absolute;right:4px;top:158px;width:56px;height:auto;transform:rotate(-35deg);z-index:2}
+  .hero h1{margin-top:12px;position:relative;z-index:1;left:10px}
   .hero .polaroid{padding-bottom:30px}
   .lore > div:first-child{border:2px solid var(--blue);border-radius:14px;padding:18px 18px 4px;background:var(--paper)}
   .lore > div:first-child p:last-child{margin-bottom:14px}
@@ -198,10 +198,11 @@ h1 .amp{color:var(--coral);display:inline}
   @supports (text-box: trim-both cap alphabetic){.banner-row{padding-block:18px}}
   /* day cards: picture on the left, words on the right */
   .cards{gap:16px;max-width:none}
-  .card{display:grid;grid-template-columns:92px minmax(0,1fr);grid-template-areas:"ill h" "ill u" "ill p";align-items:center;text-align:left;gap:2px 14px;padding:14px 16px 16px}
+  .card{display:grid;grid-template-columns:124px minmax(0,1fr);grid-template-areas:"ill h" "ill u" "ill p";align-items:center;text-align:left;gap:2px 14px;padding:14px 16px 16px}
   .card h3{grid-area:h;font-size:18px;min-height:0;justify-content:flex-start}
   .card .uline{grid-area:u;width:85%;margin:0}
   .card .ill{grid-area:ill;height:92px;padding:0}
+  .cards .card:nth-child(2) .ill img{width:auto;max-width:none;height:94px;margin:0 auto}
   .card .ill .star{display:none}
   .card .zzz{display:none}
   .card p{grid-area:p;font-size:17px}
@@ -260,8 +261,7 @@ h1 .amp{color:var(--coral);display:inline}
       <div class="h-photo">
         <figure class="polaroid">
           <img src="img/hero.jpg" alt="Katie and Matt striking a dramatic dance pose on a garden lawn, dressed up for a party" width="1100" height="1467">
-          <figcaption>~unhinged~</figcaption>
-        </figure>
+                </figure>
         <span class="tape-strip" aria-hidden="true"></span>
         <svg class="star b s1" style="--s:28px" aria-hidden="true"><use href="#st"/></svg>
       </div>
