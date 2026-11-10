@@ -170,11 +170,17 @@ h1 .amp{color:var(--coral);display:inline}
   .nav{padding-block:12px;gap:2px 16px}
   .nav a{font-size:16px}
   .nav .brand{font-size:26px}
-  /* top: cow on the left, disco ball hanging from the bar on the right, names straight after */
-  .hero{position:relative;padding-block:0 18px;gap:4px}
-  .h-art{justify-content:flex-start;align-items:flex-start}
-  .h-art .cow{width:150px;margin-left:-12px}
-  .disco-wrap{position:absolute;top:-8px;right:14%;width:84px;margin:0}
+  /* top: disco ball centred, names under it, small cow to the right of the names */
+  .hero{padding-block:0 18px;gap:4px 14px;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"disco disco" "h1 art" "place art" "btns btns" "photo photo"}
+  .h-details{display:contents}
+  .disco-wrap{grid-area:disco;width:84px;margin:0 auto 4px;justify-self:center}
+  .hero h1{grid-area:h1;align-self:end}
+  .hero .place{grid-area:place;align-self:start}
+  .hero .btns{grid-area:btns}
+  .h-art{grid-area:art;align-self:center;justify-content:center;align-items:center}
+  .h-art .star-top{display:none}
+  .h-art .cow{width:112px;max-width:none;margin:0}
+  .h-photo{grid-area:photo}
   h1{font-size:44px;margin-bottom:10px}
   .place{font-size:19px}
   .btns{margin-top:14px}
@@ -315,9 +321,11 @@ h1 .amp{color:var(--coral);display:inline}
   <section class="gut">
     <div class="wrap lore">
       <div>
-        <p>Once upon a time, KTizzle and MattyRizz were just Katie and Matt. Then came the hikes, the road trips, the questionable dance moves and far too many inside jokes, and somewhere along the way the nicknames stuck.</p>
-        <p>A few years (and a lot of snacks) later, we found ourselves wandering the Highlands, dodging sheep and getting rained on sideways, and we both had the same thought: this is where we want everyone we love, all in one place, for one very long weekend.</p>
-        <p>So here's the plan. A wedding, a costume party and a very lazy Sunday, in a mill in Kiltarlity. Bring your rain boots, your dancing shoes and your best unsolicited advice. We can't wait to celebrate with you.</p>
+        <p>Well, all you need to know is they met at work (shoutout Zego). Katie made out with Matt's face at a work event, Go Padres! Katie then says they're JUST FRIENDS (like bruh what?). Matt proceeds to pursue Katie for about a WHOLE year! Katie finally comes to her senses and was like, "you coo, I guess I like love you and stuff".</p>
+        <p>Matt and Katie have been together now for about 5 years (depending on when you're reading this). They are a great team and have decided to make the move to the big leagues in 2028 in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿!</p>
+        <p>You might be wondering why Scotland, like why are you making us come to yet another destination wedding...? Welp, our sweet KTIZZLEs roots are here and Matty has come to love it like blah blah blah blah.</p>
+        <p>YOU ARE INVITED (lucky you right??)!!! We want this to be a celebration of love, an absolute party and to bring our loved ones together (Katie wants to meld you all into best friends). Anywhoooo, get excited and we will keep updating this site with events/themes and all the need to knows as we get closer to the date!</p>
+        <p>LOVE YOU ALL! SEE YEW IN SCOTLAND!!</p>
       </div>
       <div class="circle-wrap">
         <figure class="polaroid lore-pol"><img src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800"></figure>
@@ -341,7 +349,7 @@ h1 .amp{color:var(--coral);display:inline}
         <a class="btn" href="guide.html">Read the guide</a>
       </article>
       <article class="tile">
-        <img class="art" src="art/sheep-b.webp" alt="">
+        <img class="art" src="art/nessie.webp" alt="">
         <h3>Unsolicited Advice</h3>
         <p>Planning tips, day-of wisdom, marriage advice, wildcard opinions. Leave yours on the advice wall so everyone can learn from you.</p>
         <a class="btn" href="advice.html">Leave some advice</a>
