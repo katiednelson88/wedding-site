@@ -57,7 +57,7 @@ h1 .amp{color:var(--coral);display:inline}
 .tape{background:var(--paper);padding:10px 34px 12px;transform:rotate(-1.5deg);box-shadow:0 3px 10px rgba(80,50,20,.12)}
 .tape p{margin:0;font-size:clamp(28px,3vw,40px);line-height:1.05}
 .swoosh{display:block;height:16px;width:min(380px,88%);margin:-6px auto 0}
-.place{margin:6px 0 0;font-size:clamp(19px,1.9vw,24px);text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
+.place{margin:6px 0 0;font-family:var(--read);font-size:clamp(19px,1.9vw,24px);text-transform:uppercase;letter-spacing:.02em;line-height:1.15}
 .btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:20px}
 .btn{display:inline-block;text-decoration:none;font-family:var(--display);font-size:19px;letter-spacing:.03em;padding:12px 24px 9px;border-radius:999px;background:var(--orange);color:#fff;box-shadow:3px 4px 0 var(--blue);transition:transform .15s}
 .btn:hover{transform:translateY(-2px) rotate(-1deg)}
@@ -124,14 +124,14 @@ h1 .amp{color:var(--coral);display:inline}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .card{background:var(--paper);box-shadow:inset 0 0 26px rgba(190,150,90,.22),0 4px 12px rgba(80,50,20,.14);padding:20px 18px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px}
 .card:nth-child(1){transform:rotate(-1.6deg)} .card:nth-child(2){transform:rotate(1deg)} .card:nth-child(3){transform:rotate(-.8deg)}
-.card h3{margin:0;font-size:22px;line-height:1.1;text-transform:uppercase;min-height:2.2em;display:flex;align-items:center}
+.card h3{margin:0;font-family:var(--read);font-size:22px;line-height:1.1;text-transform:uppercase;min-height:2.2em;display:flex;align-items:center}
 .card .uline{width:70%;height:10px;display:block;margin-top:-4px}
 .ill{position:relative;height:190px;width:100%;display:flex;align-items:center;justify-content:center;padding:6px 34px}
 .ill img{max-height:100%;width:auto;max-width:100%}
 .ill .star{position:absolute}
 .zzz{position:absolute;top:8px;right:16px;font-size:26px;line-height:.8;transform:rotate(-8deg)}
 .zzz small{font-size:18px}
-.card p{margin:0;font-size:20px;line-height:1.25}
+.card p{margin:0;font-family:var(--read);font-size:20px;line-height:1.25}
 
 /* landscape + countdown */
 /* scoreboard countdown */
@@ -277,7 +277,7 @@ h1 .amp{color:var(--coral);display:inline}
         <span class="sp"></span>
         <img class="flag" src="art/flag.webp" alt="">
         <span class="sp"></span>
-        <h2>The Wedding Weekend</h2>
+        <h2>The Big Event(s)</h2>
         <span class="sp"></span>
         <img class="thistle" src="art/thistle-up.webp" alt="">
         <span class="sp"></span>
@@ -294,32 +294,32 @@ h1 .amp{color:var(--coral);display:inline}
         </div>
         <div class="cards">
           <article class="card">
-            <h3>Fri 26 &middot; The Wedding</h3>
+            <h3>Fri 26 &middot; The Main Thing (Wedding)</h3>
             <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 6 C60 2 120 9 196 5" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
             <div class="ill">
               <svg class="star b" style="--s:22px;left:6px;top:18px" aria-hidden="true"><use href="#st"/></svg>
               <img src="art/coupe.webp" alt="">
               <svg class="star r" style="--s:20px;right:8px;bottom:22px" aria-hidden="true"><use href="#st"/></svg>
             </div>
-            <p>Kick things off in Kiltarlity!</p>
+            <p>We Say “Duh Dude”</p>
           </article>
           <article class="card">
-            <h3>Sat 27 &middot; Reception Costume Party</h3>
+            <h3>Sat 27 &middot; The After Party (Reception)</h3>
             <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 5 C70 9 130 2 196 6" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
             <div class="ill" style="padding-inline:10px">
               <img src="art/castle.webp" alt="">
             </div>
-            <p>Eat, drink, and get costumed!</p>
+            <p>Shotguns, Snuff and Silly Dress Up Stuff</p>
           </article>
           <article class="card">
-            <h3>Sun 28 &middot; Recovery</h3>
+            <h3>Sun 28 &middot; Is Everyone Okay?</h3>
             <svg class="uline" viewBox="0 0 200 10" preserveAspectRatio="none" aria-hidden="true"><path d="M4 6 C60 2 120 9 196 5" fill="none" stroke="#EE6E8E" stroke-width="3" stroke-linecap="round"/></svg>
             <div class="ill">
               <svg class="star p" style="--s:22px;left:4px;top:50%" aria-hidden="true"><use href="#st"/></svg>
               <img src="art/sheep-a.webp" alt="">
               <span class="zzz" aria-hidden="true"><small>z</small> z<br>&nbsp;&nbsp;Z</span>
             </div>
-            <p>Brunch, goodbyes, and one last hurrah.</p>
+            <p>Brunch, Recovery, Storytime</p>
           </article>
         </div>
       </div>
@@ -327,14 +327,14 @@ h1 .amp{color:var(--coral);display:inline}
   </section>
 
   <div class="plan-band gut gap" id="lore">
-    <div class="banner-row"><span class="sp"></span><img class="band-art left" src="art/bagpipes.webp" alt=""><span class="sp"></span><h2>How We Got Here</h2><span class="sp"></span><img class="band-art right" src="art/map.webp" alt=""><span class="sp"></span></div>
+    <div class="banner-row"><span class="sp"></span><img class="band-art left" src="art/bagpipes.webp" alt=""><span class="sp"></span><h2>The Lore</h2><span class="sp"></span><img class="band-art right" src="art/map.webp" alt=""><span class="sp"></span></div>
   </div>
   <section class="gut">
     <div class="wrap lore">
       <div>
         <p>Well, all you need to know is they met at work (shoutout Zego). Katie made out with Matt's face at a work event, Go Padres! Katie then says they're JUST FRIENDS (like bruh what?). Matt proceeds to pursue Katie for about a WHOLE year! Katie finally comes to her senses and was like, "you coo, I guess I like love you and stuff".</p>
         <p>Matt and Katie have been together now for about 5 years (depending on when you're reading this). They are a great team and have decided to make the move to the big leagues in 2028 in Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿!</p>
-        <p>You might be wondering why Scotland, like why are you making us come to yet another destination wedding...? Welp, our sweet KTIZZLEs roots are here and Matty has come to love it like blah blah blah blah.</p>
+        <p>You might be wondering why Scotland, like why are you making us come to yet another destination wedding...? Welp, our sweet KTIZZLEs roots are here and Matt really wants to wear a kilt.</p>
         <p>YOU ARE INVITED (lucky you right??)!!! We want this to be a celebration of love, an absolute party and to bring our loved ones together (Katie wants to meld you all into best friends). Anywhoooo, get excited and we will keep updating this site with events/themes and all the need to knows as we get closer to the date!</p>
         <p>LOVE YOU ALL! SEE YEW IN SCOTLAND!!</p>
       </div>
@@ -351,20 +351,20 @@ h1 .amp{color:var(--coral);display:inline}
   </section>
 
   <div class="plan-band gut gap" id="info">
-    <div class="banner-row"><span class="sp"></span><img class="band-art pair l" src="art/jersey-k.webp" alt=""><span class="sp"></span><h2>Need to Know</h2><span class="sp"></span><img class="band-art pair r" src="art/jersey-m.webp" alt=""><span class="sp"></span></div>
+    <div class="banner-row"><span class="sp"></span><img class="band-art pair l" src="art/jersey-k.webp" alt=""><span class="sp"></span><h2>The Deets</h2><span class="sp"></span><img class="band-art pair r" src="art/jersey-m.webp" alt=""><span class="sp"></span></div>
   </div>
   <section class="gut">
     <div class="wrap info">
       <article class="tile">
         <img class="art" src="art/kilt.webp" alt="">
-        <h3>Survival Guide</h3>
-        <p>Flights from San Diego (you land a day after you leave), where to stay at Kiltarlity Lodges, why you should rent a car, and things to do before the parties start.</p>
+        <h3>Loch Ness Survival Guide</h3>
+        <p>Stuff you need to know, flights, transport, lodging, stuff to do.</p>
         <a class="btn" href="guide.html">Read the guide</a>
       </article>
       <article class="tile">
         <img class="art" src="art/nessie.webp" alt="">
-        <h3>Unsolicited Advice</h3>
-        <p>Planning tips, day-of wisdom, marriage advice, wildcard opinions. Leave yours on the advice wall so everyone can learn from you.</p>
+        <h3>Unsolicited Advice (that we actually want it)</h3>
+        <p>Tips for Planning, Wedding day must do’s, Marriage Advice, or if you just want to tell us we pretty.</p>
         <a class="btn" href="advice.html">Leave some advice</a>
       </article>
     </div>
