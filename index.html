@@ -6,16 +6,16 @@
 <title>KTizzle &amp; MattyRizz</title>
 <meta name="description" content="KTizzle and MattyRizz are getting married in Kiltarlity, Scotland, 26 to 28 May 2028.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Fredoka:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Patrick+Hand&display=swap">
 <style>
 /* Layout: poster-length home page. Hero = [cow + thistles | wedding details under a hanging disco ball | tilted polaroid of us].
    Then lavender bands introduce each part: Wedding Weekend (day cards), How We Got Here (story + photo), Need to Know
-   (guide + advice), the landscape with the countdown card, and a lavender footer.
+   (guide + advice), a scoreboard countdown between the sheep and the cow, and a lavender footer.
    Words are live text; each illustration sits in its own space, never over text. */
 :root{
   --cream:#FCEDCE; --paper:#FFF8EA; --orange:#E85A06; --coral:#DE544E; --red:#D7302A; --red-soft:#F4B3AC;
   --blue:#23468C; --blue-soft:#C9D6EE; --pink:#EE6E8E; --pink-paper:#F8CBC4;
-  --read:'Fredoka','Nunito','Trebuchet MS',system-ui,sans-serif;
+  --read:'Patrick Hand','Comic Sans MS','Segoe Print',cursive;
   --display:'Luckiest Guy','Arial Black',Impact,sans-serif;
   --hand:'Luckiest Guy','Arial Black',Impact,sans-serif; --navtext:#A33C04; --lilac:#EAD6F0;
   color-scheme:light;
@@ -88,7 +88,7 @@ h1 .amp{color:var(--coral);display:inline}
 
 /* how we got here */
 .lore{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:center;padding-block:52px 20px}
-.lore p{margin:0 0 18px;max-width:52ch;font-family:var(--read);font-weight:500;font-size:21px;line-height:1.55;letter-spacing:0}
+.lore p{margin:0 0 18px;max-width:52ch;font-family:var(--read);font-weight:400;font-size:24px;line-height:1.45;letter-spacing:.01em}
 .ph{background:rgba(238,110,142,.25);padding:0 6px;border-radius:4px}
 .circle-wrap{position:relative;justify-self:center;width:min(420px,100%)}
 .circle{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 10px 24px rgba(80,50,20,.18)}
@@ -102,7 +102,7 @@ h1 .amp{color:var(--coral);display:inline}
 .tile .art{height:130px;width:auto;max-width:100%}
 .ph-box{width:180px;height:130px;display:flex;align-items:center;justify-content:center;border:3px dashed var(--navtext);border-radius:12px;background:rgba(255,248,234,.8);color:var(--navtext);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
 .tile h3{margin:0;color:var(--orange);font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
-.tile p{margin:0;max-width:46ch;font-family:var(--read);font-weight:500;font-size:19px;line-height:1.5;letter-spacing:0}
+.tile p{margin:0;max-width:46ch;font-family:var(--read);font-weight:400;font-size:22px;line-height:1.4;letter-spacing:.01em}
 .tile .btn{margin-top:6px}
 .banner-row{display:flex;align-items:center;padding-block:14px}
 .banner-row .sp{flex:1 1 0;min-width:8px}
@@ -128,22 +128,13 @@ h1 .amp{color:var(--coral);display:inline}
 .card p{margin:0;font-size:20px;line-height:1.25}
 
 /* landscape + countdown */
-.bottom{position:relative;margin-top:34px;padding-bottom:40px}
-.land{width:68%;margin-left:7%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 90%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 9%,#000 90%,transparent 100%)}
-.bottom .t1{position:absolute;right:12%;bottom:290px;width:96px}
-.bottom .t2{position:absolute;left:30px;bottom:24px;width:150px;transform:rotate(-20deg)}
-.bottom .sky{position:absolute}
-.count{position:absolute;right:3%;bottom:70px;width:min(260px,30%);background:var(--pink-paper);padding:20px 18px 16px;transform:rotate(2.5deg);box-shadow:0 5px 14px rgba(80,50,20,.18);text-align:center}
-.count h2{margin:0 0 6px;font-weight:400;font-size:26px;line-height:1.1;letter-spacing:.06em;text-transform:uppercase}
-.days{margin:0;display:flex;flex-direction:column;align-items:center}
-.days b{font-weight:400;color:var(--orange);font-size:clamp(56px,6vw,76px);line-height:1;font-variant-numeric:tabular-nums}
-.days span{font-size:20px;letter-spacing:.1em;text-transform:uppercase}
-.clock{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
-.clock div{display:flex;flex-direction:column;align-items:center;padding:0 4px;border-left:2px solid rgba(35,70,140,.5)}
-.clock div:first-child{border-left:0}
-.clock b{font-family:var(--display);font-weight:400;color:var(--orange);font-size:clamp(28px,3.2vw,40px);line-height:1;font-variant-numeric:tabular-nums}
-.clock span{font-size:15px;text-transform:uppercase}
-.count svg{display:block;margin:10px auto 0}
+/* scoreboard countdown */
+.score{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr) minmax(0,1fr);align-items:center;gap:10px;padding-block:60px 56px}
+.score .sheep{width:min(200px,100%);justify-self:center;transform:scaleX(-1)}
+.score .cow{width:min(260px,100%);justify-self:center}
+.score-mid{display:flex;flex-direction:column;align-items:center;text-align:center}
+.big{margin:0;color:var(--orange);font-size:clamp(84px,14vw,170px);line-height:1;letter-spacing:.02em;text-shadow:4px 5px 0 var(--pink-paper);font-variant-numeric:tabular-nums}
+.score .sub{margin:6px 0 0;font-size:clamp(20px,2.4vw,28px);letter-spacing:.06em;text-transform:uppercase}
 
 /* tablet and phone */
 @media (max-width:920px){
@@ -170,9 +161,7 @@ h1 .amp{color:var(--coral);display:inline}
   .ph-img.left{width:84px;height:95px;margin:-26px 0 -34px}
   .ph-img.right{width:66px;height:99px;margin:-38px 0 -22px}
   .rail{padding-top:0}
-  .land{width:100%;margin-left:0;-webkit-mask-image:none;mask-image:none}
-  .bottom .t1,.bottom .t2,.bottom .sky{display:none}
-  .count{position:relative;right:auto;bottom:auto;width:min(360px,100%);margin:-30px auto 0}
+  .score{gap:4px;padding-block:44px 40px}
 }
 @media (max-width:520px){
   .nav a{font-size:18px}
@@ -323,18 +312,14 @@ h1 .amp{color:var(--coral);display:inline}
     </div>
   </section>
 
-  <section class="gut">
-    <div class="wrap bottom">
-      <svg class="star p sky" style="--s:24px;left:16%;top:-10px" aria-hidden="true"><use href="#st"/></svg>
-      <svg class="star b sky" style="--s:24px;left:24%;top:-24px" aria-hidden="true"><use href="#st"/></svg>
-      <svg class="star p sky" style="--s:24px;left:66%;top:-18px" aria-hidden="true"><use href="#st"/></svg>
-      <img class="land" src="art/land.webp" alt="Watercolour of a Highland town by a river, with a stone bridge and hills behind">
-      <img class="thistle t1" src="art/thistle-up.webp" alt="" style="transform:rotate(8deg)">
-      <div class="count torn" role="timer" aria-live="off">
-        <h2>Countdown</h2>
-        <p class="days"><b id="cd-d">562</b><span>Days</span></p>
-        <svg width="200" height="12" viewBox="0 0 200 12" aria-hidden="true"><path d="M6 7 C60 2 130 11 194 5" fill="none" stroke="#23468C" stroke-width="3" stroke-linecap="round"/></svg>
+  <section class="gut" aria-label="Countdown">
+    <div class="wrap score">
+      <img class="sheep" src="art/sheep-a.webp" alt="">
+      <div class="score-mid">
+        <p class="big" id="cd-d">563</p>
+        <p class="sub">days to go</p>
       </div>
+      <img class="cow" src="art/cow.webp" alt="">
     </div>
   </section>
 </main>
