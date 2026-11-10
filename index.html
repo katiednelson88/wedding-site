@@ -100,6 +100,7 @@ h1 .amp{color:var(--coral);display:inline}
 .tile{background:var(--paper);box-shadow:inset 0 0 26px rgba(190,150,90,.22),0 4px 12px rgba(80,50,20,.14);padding:26px 30px 30px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
 .tile:nth-child(1){transform:rotate(-1deg)} .tile:nth-child(2){transform:rotate(1deg)}
 .tile .art{height:130px;width:auto;max-width:100%}
+.ph-box{width:180px;height:130px;display:flex;align-items:center;justify-content:center;border:3px dashed var(--navtext);border-radius:12px;background:rgba(255,248,234,.8);color:var(--navtext);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
 .tile h3{margin:0;color:var(--orange);font-weight:400;font-size:clamp(28px,3vw,36px);line-height:1;letter-spacing:.03em;text-transform:uppercase}
 .tile p{margin:0;max-width:46ch;font-family:var(--read);font-weight:500;font-size:19px;line-height:1.5;letter-spacing:0}
 .tile .btn{margin-top:6px}
@@ -150,7 +151,6 @@ h1 .amp{color:var(--coral);display:inline}
   .h-art{flex-direction:row;align-items:flex-end;justify-content:center;gap:0}
   .h-art .cow{width:min(300px,62%);margin:0}
   .h-art .thistle-up{width:64px!important}
-  .h-art .thistle-flat{display:none}
   .disco-wrap{margin-top:0}
   .h-photo{width:min(340px,92%)}
   .cards-row{grid-template-columns:minmax(0,1fr)}
@@ -295,7 +295,7 @@ h1 .amp{color:var(--coral);display:inline}
         <p>Short version: two people with excellent nicknames decided to make it official, and they want all of you in a mill in the Highlands to celebrate.</p>
       </div>
       <div class="circle-wrap">
-        <img class="circle" src="img/lore.jpg" alt="Katie and Matt laughing on a hike through green hills in Scotland, with sheep grazing behind them" width="700" height="700">
+        <img class="circle" src="img/us.jpg" alt="Matt and Katie smiling together in a snowy pine forest" width="800" height="800">
         <img class="thistle" src="art/thistle-up.webp" alt="">
         <svg class="star b" style="--s:26px;right:2%;top:4%" aria-hidden="true"><use href="#st"/></svg>
         <svg class="star p" style="--s:22px;right:-6%;top:18%" aria-hidden="true"><use href="#st"/></svg>
@@ -309,7 +309,7 @@ h1 .amp{color:var(--coral);display:inline}
   <section class="gut">
     <div class="wrap info">
       <article class="tile">
-        <img class="art" src="art/thistle-flat.webp" alt="">
+        <div class="ph-box" aria-hidden="true">Image</div>
         <h3>Survival Guide</h3>
         <p>Flights from San Diego (you land a day after you leave), where to stay at Kiltarlity Lodges, why you should rent a car, and things to do before the parties start.</p>
         <a class="btn" href="guide.html">Read the guide</a>
