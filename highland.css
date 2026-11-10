@@ -63,7 +63,7 @@ h2.sec{margin:0;font-family:var(--display);font-weight:400;color:var(--orange);f
 .hint{margin:0 0 10px;font-size:19px;line-height:1.35;color:#5A3A2A}
 
 /* survival guide sections */
-.guide-sec{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:start;padding-block:44px;border-top:2px dashed var(--blue-soft)}
+.guide-sec{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:36px;align-items:center;padding-block:44px;border-top:2px dashed var(--blue-soft)}
 .guide-sec:first-child{border-top:0}
 .guide-sec .eyebrow{margin-bottom:6px}
 .guide-sec img.circle{border-radius:50%;object-fit:cover;aspect-ratio:1/1;border:6px solid #fff;box-shadow:0 8px 18px rgba(80,50,20,.2);margin-top:20px;width:min(220px,100%);height:auto}
