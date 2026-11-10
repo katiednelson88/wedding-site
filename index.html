@@ -144,7 +144,7 @@ h1 .amp{color:var(--coral);display:inline}
   .hero{grid-template-columns:minmax(0,1fr);grid-template-areas:"art" "details" "photo";gap:10px}
   .h-art{flex-direction:row;align-items:flex-end;justify-content:center;gap:0}
   .h-art .cow{width:min(300px,62%);margin:0}
-  .h-art .thistle-up{width:64px!important}
+  .h-art .star-top{display:none}
   .disco-wrap{margin-top:0}
   .h-photo{width:min(340px,92%)}
   .cards-row{grid-template-columns:minmax(0,1fr)}
@@ -166,11 +166,43 @@ h1 .amp{color:var(--coral);display:inline}
   .rail{padding-top:0}
   .score{gap:4px;padding-block:44px 40px}
 }
-@media (max-width:520px){
-  .nav a{font-size:18px}
-  .tape{padding:8px 18px 10px}
-  .tape p{font-size:28px}
-  .stamp{right:-6px}
+@media (max-width:600px){
+  .nav{padding-block:12px;gap:2px 16px}
+  .nav a{font-size:16px}
+  .nav .brand{font-size:26px}
+  /* top: cow on the left, disco ball hanging from the bar on the right, names straight after */
+  .hero{position:relative;padding-block:0 18px;gap:4px}
+  .h-art{justify-content:flex-start;align-items:flex-start}
+  .h-art .cow{width:150px;margin-left:-12px}
+  .disco-wrap{position:absolute;top:-8px;right:14%;width:84px;margin:0}
+  h1{font-size:44px;margin-bottom:10px}
+  .place{font-size:19px}
+  .btns{margin-top:14px}
+  .btn{font-size:17px;padding:10px 20px 8px}
+  .h-photo{width:min(270px,80%);padding-top:18px}
+  /* bands: smaller lettering and art so headings stay on one or two lines */
+  .banner-row h2{font-size:26px}
+  .banner-row .flag,.band-art.left,.band-art.pair{width:62px;height:70px;margin:-18px 0 -22px}
+  .banner-row .thistle,.band-art.right{width:52px;height:78px;margin:-26px 0 -12px}
+  @supports (text-box: trim-both cap alphabetic){.banner-row{padding-block:18px}}
+  /* day cards: picture on the left, words on the right */
+  .cards{gap:16px;max-width:none}
+  .card{display:grid;grid-template-columns:92px minmax(0,1fr);grid-template-areas:"ill h" "ill u" "ill p";align-items:center;text-align:left;gap:2px 14px;padding:14px 16px 16px}
+  .card h3{grid-area:h;font-size:18px;min-height:0;justify-content:flex-start}
+  .card .uline{grid-area:u;width:85%;margin:0}
+  .card .ill{grid-area:ill;height:92px;padding:0}
+  .card .ill .star{display:none}
+  .card .zzz{display:none}
+  .card p{grid-area:p;font-size:17px}
+  .rail{display:none}
+  /* story and info */
+  .lore p{font-size:20px}
+  .circle-wrap{width:min(260px,80%)}
+  .tile{padding:18px 18px 22px;gap:8px}
+  .tile .art{height:90px}
+  .tile h3{font-size:26px}
+  .tile p{font-size:19px}
+  .foot p{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -196,7 +228,7 @@ h1 .amp{color:var(--coral);display:inline}
   <div class="gut">
     <div class="wrap hero">
       <div class="h-art">
-        <img class="thistle-up" src="art/thistle-up.webp" alt="" style="width:110px;transform:rotate(-12deg);margin:0 0 -10px 30%">
+        <svg class="star r star-top" style="--s:56px;margin:18px 0 6px 38%;transform:rotate(-12deg)" aria-hidden="true"><use href="#st"/></svg>
         <img class="cow" src="art/cow.webp" alt="">
       </div>
 
